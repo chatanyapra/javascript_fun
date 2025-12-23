@@ -1,23 +1,28 @@
-body{
+body {
     background-color: black;
 }
-.container{
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#block{
+
+#block {
     border: 2px solid gold;
-    margin-top: 5%;
+    margin-top: 20px;
     display: grid;
     grid-template-rows: repeat(20, 1fr);
     grid-template-columns: repeat(20, 1fr);
     /* background-image: linear-gradient(rgb(222, 185, 185), rgb(239, 239, 150)); */
 }
-#foodBlock{
+
+#foodBlock {
     background-color: blueviolet;
 }
-.score{position: relative;
+
+.score {
+    position: relative;
     color: antiquewhite;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

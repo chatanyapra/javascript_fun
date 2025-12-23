@@ -16,11 +16,11 @@
   </div>
 
   <script>
-    var score=0;
+    var score = 0;
     var myInterval
     var blocksize = 25;
     var rows = 25;
-    var column = 20;
+    var column = 25;
     var snakeX = blocksize * 5;
     var snakeY = blocksize * 5;
     var foodX;
@@ -37,7 +37,7 @@
       block.height = column * blocksize;
       ctx = block.getContext("2d");
       document.addEventListener('keyup', KeyButton);
-      myInterval= setInterval(Items, 1000 / 8);
+      myInterval = setInterval(Items, 1000 / 8);
       foodRandom();
     }
     function KeyButton(e) {
@@ -66,13 +66,13 @@
       ctx.fillStyle = grd;
       ctx.fillRect(0, 0, block.width, block.height);
       if (snakeX == rows * blocksize || snakeY == column * blocksize || snakeX < 0 || snakeY < 0) {
-            clearInterval(myInterval);
-        if(confirm("Try Again!")== false){
-              window.close("snake.html");
-            }
-            else{
-              location.reload();
-            }
+        clearInterval(myInterval);
+        if (confirm("Try Again!") == false) {
+          window.close("snake.html");
+        }
+        else {
+          location.reload();
+        }
       }
       if (snakeX === foodX && snakeY === foodY) {
         // score++;
@@ -93,7 +93,7 @@
       snakeX += velocityX * blocksize;
       snakeY += velocityY * blocksize;
       ctx.fillRect(snakeX, snakeY, blocksize, blocksize);
-      ctx.strokeRect(snakeX-2, snakeY-2, blocksize+4, blocksize+4);
+      ctx.strokeRect(snakeX - 2, snakeY - 2, blocksize + 4, blocksize + 4);
       for (i = 0; i < snakebody.length; i++) {
         ctx.fillRect(snakebody[i][0], snakebody[i][1], blocksize, blocksize);
         ctx.strokeRect(snakebody[i][0], snakebody[i][1], blocksize, blocksize);
